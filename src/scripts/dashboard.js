@@ -99,6 +99,7 @@ angular.module('adf')
       restrict: 'EA',
       transclude : false,
       scope: {
+      	editMode:'=',
         structure: '@',
         name: '@',
         collapsible: '@',
