@@ -1,6 +1,5 @@
 {
   "name": "angular-dashboard-framework",
-  "keywords":"nazarazz",
   "version": "0.5.0-SNAPSHOT",
   "main": "dist/angular-dashboard-framework.min.js",
   "ignore": [
