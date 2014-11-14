@@ -165,6 +165,10 @@ angular.module('adf')
 		      $scope.modelCopy = angular.copy($scope.modelCopy, $scope.adfModel);
         };
 
+        $rootScope.$on('cancelEdit', function(){
+            $scope.canselEditMode();
+        });
+
         // edit dashboard settings
         $scope.editDashboardDialog = function(){
           var editDashboardScope = $scope.$new();
