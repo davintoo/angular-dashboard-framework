@@ -1,5 +1,5 @@
 {
-  "name": "ang-dashboard-framework",
+  "name": "angular-dashboard-framework",
   "version": "0.5.0-SNAPSHOT",
   "main": "dist/angular-dashboard-framework.min.js",
   "ignore": [
