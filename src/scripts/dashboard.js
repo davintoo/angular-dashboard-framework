@@ -229,6 +229,13 @@ angular.module('adf')
             addScope.$destroy();
           };
         };
+
+        $rootScope.$on('addWidget', function(){
+            $scope.addWidgetDialog();
+        });
+
+
+
       },
       link: function ($scope, $element, $attr) {
         // pass attributes to scope
