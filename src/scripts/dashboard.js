@@ -228,6 +228,10 @@ angular.module('adf')
             instance.close();
             addScope.$destroy();
           };
+          $rootScope.$on('closeDialog',function(){
+              addScope.closeDialog();
+          });
+
         };
 
         $rootScope.$on('addWidget', function(){
