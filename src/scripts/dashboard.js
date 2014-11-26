@@ -147,7 +147,7 @@ angular.module('adf')
         }
 
         // edit mode
-        $scope.editMode = false;
+
         $scope.editClass = "";
 
         $scope.cancelEditMode = function(){
@@ -163,9 +163,10 @@ angular.module('adf')
 
             if ($scope.editMode){
                 $scope.modelCopy = angular.copy($scope.adfModel, {});
+
             }
 
-            if (!$scope.editMode){
+            if ($scope.editMode == false){
                 $rootScope.$broadcast('adfDashboardChanged', name, model);
             }
 
