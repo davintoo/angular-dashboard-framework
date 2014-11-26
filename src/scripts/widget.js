@@ -36,6 +36,7 @@ angular.module('adf')
     }
 
     function preLink($scope, $element, $attr){
+
       var definition = $scope.definition;
       if (definition) {
         var w = dashboard.widgets[definition.type];
@@ -81,7 +82,8 @@ angular.module('adf')
 
     function postLink($scope, $element, $attr) {
       var definition = $scope.definition;
-      if (definition) {
+
+        if (definition) {
         // bind close function
         $scope.close = function() {
           var column = $scope.col;
@@ -134,7 +136,8 @@ angular.module('adf')
         definition: '=',
         col: '=column',
         editMode: '@',
-        collapsible: '='
+        collapsible: '=',
+        user:'=user'
       },
       compile: function compile($element, $attr, transclude) {
 

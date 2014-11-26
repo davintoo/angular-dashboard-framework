@@ -104,7 +104,8 @@ angular.module('adf')
         name: '@',
         collapsible: '@',
         adfModel: '=',
-        adfWidgetFilter: '='
+        adfWidgetFilter: '=',
+        user:'=user'
       },
       controller: function($scope){
         // sortable options for drag and drop
@@ -237,6 +238,8 @@ angular.module('adf')
         $rootScope.$on('addWidget', function(){
             $scope.addWidgetDialog();
         });
+
+
 
 
 
