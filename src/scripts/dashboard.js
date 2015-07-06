@@ -261,7 +261,6 @@ angular.module('adf')
                 $scope.$on('$destroy',listen);
 
 
-
             },
             link: function ($scope, $element, $attr) {
                 // pass attributes to scope

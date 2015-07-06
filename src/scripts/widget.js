@@ -25,7 +25,7 @@
 'use strict';
 
 angular.module('adf')
-  .directive('adfWidget', function($log, $modal, dashboard, adfTemplatePath) {
+  .directive('adfWidget', function($log, $modal, dashboard, adfTemplatePath, $rootScope) {
 
     function stringToBoolean(string){
       switch(string != null ? string.toLowerCase() : null){
@@ -54,6 +54,11 @@ angular.module('adf')
           // pass copy of widget to scope
           $scope.widget = angular.copy(w);
 
+
+          $scope.open = function() {
+              $rootScope.$emit('widgetModalEvent', $scope.widget.controller);
+          };
+
           // create config object
           var config = definition.config;
           if (config) {
@@ -78,6 +83,7 @@ angular.module('adf')
       } else {
         $log.debug('definition not specified, widget was probably removed');
       }
+
     }
 
     function postLink($scope, $element, $attr) {
@@ -121,10 +127,12 @@ angular.module('adf')
               $scope.$broadcast('widgetConfigChanged');
             }
           };
+
         };
       } else {
         $log.debug('widget not found');
       }
+
     }
 
     return {
